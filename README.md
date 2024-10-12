@@ -1,4 +1,4 @@
-# Project Name: QuickLifts
+# QuickLifts
 
 ## Description
 
@@ -70,3 +70,77 @@ To run the project locally, you’ll need:
    cd ../frontend
    npm install
    ```
+
+4. **Set up environment variables**:
+   Create a `.env` file in both the backend and frontend directories with the following:
+
+   **Backend (`backend/.env`)**:
+
+   ```bash
+   MONGODB_URI=mongodb://localhost:27017/yourdbname
+   GOOGLE_CLIENT_ID=your_google_client_id
+   GOOGLE_CLIENT_SECRET=your_google_client_secret
+   FACEBOOK_CLIENT_ID=your_facebook_client_id
+   FACEBOOK_CLIENT_SECRET=your_facebook_client_secret
+   JWT_SECRET=your_jwt_secret
+   STRIPE_SECRET_KEY=your_stripe_secret_key
+   ```
+
+   **Frontend (`frontend/.env`)**:
+
+   ```bash
+   VITE_GOOGLE_MAPS_API_KEY=your_google_maps_api_key
+   ```
+
+5. **Set up the MongoDB database**:
+   If you're using a local MongoDB instance, ensure it’s running. If you’re using MongoDB Atlas, configure the connection string in your `.env` file.
+
+6. **Run the development servers**:
+
+   - **Backend**: In the `backend` directory, run:
+     ```bash
+     npm run dev
+     ```
+   - **Frontend**: In the `frontend` directory, run:
+     ```bash
+     npm run dev
+     ```
+
+7. **Open the app in the browser**:
+   The frontend will be running at `http://localhost:3000` and the backend at `http://localhost:3001`.
+
+## API Endpoints
+
+### User Routes
+
+- `POST /auth/signup` - Create a new user
+- `POST /auth/login` - Login user with OAuth or JWT
+- `GET /users/me` - Get logged-in user information
+
+### Driver Routes
+
+- `POST /drivers/signup` - Register a new driver
+- `GET /drivers/me` - Get logged-in driver information
+- `POST /drivers/availability` - Update driver availability status
+
+### Ride Routes
+
+- `POST /rides` - Create a new ride request
+- `GET /rides/:id` - Get ride details
+- `POST /rides/:id/status` - Update ride status (requested, accepted, in-progress, completed)
+
+## Roadmap
+
+### Planned Features:
+
+- **Driver Ratings**: Allow users to rate and review drivers.
+- **Promotions**: Create a promotion and discount feature for users.
+- **Ride History Export**: Enable users to export their ride history in CSV format.
+
+## Contributing
+
+We welcome contributions to improve **QuickLifts**. Please open an issue or submit a pull request with your suggestions!
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
