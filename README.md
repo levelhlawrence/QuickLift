@@ -97,11 +97,11 @@ To run the project locally, you’ll need:
 
 6. **Run the development servers**:
 
-   - **Backend**: In the `backend` directory, run:
+   - **Backend**: In the `server` directory, run:
      ```bash
      npm run dev
      ```
-   - **Frontend**: In the `frontend` directory, run:
+   - **Frontend**: In the `client` directory, run:
      ```bash
      npm run dev
      ```
