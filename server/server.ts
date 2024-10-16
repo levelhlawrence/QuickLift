@@ -1,4 +1,4 @@
-import { app, port, Request, Response } from "./app/index";
+import { app, port, Request, Response } from "./api/index";
 import swagger from "express-jsdoc-swagger";
 
 // live Documentation
