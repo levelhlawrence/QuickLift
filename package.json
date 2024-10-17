@@ -1,0 +1,19 @@
+{
+  "name": "quicklift",
+  "version": "1.0.0",
+  "description": "## Description",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd client && npm run dev",
+    "server": "cd server && npm run dev",
+    "dev": "concurrently \"npm run client\" \"npm run server\""
+  },
+  "dependencies": {
+    "@types/three": "^0.169.0",
+    "concurrently": "^9.0.1",
+    "three": "^0.169.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
